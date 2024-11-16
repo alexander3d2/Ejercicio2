@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Ejecutar Aplicación') {
             steps {
-                sh 'java -jar target/Airlines-0.0.1-SNAPSHOT.jar'
+                bat 'java -jar target/Airlines-0.0.1-SNAPSHOT.jar'
             }
         }
     }
