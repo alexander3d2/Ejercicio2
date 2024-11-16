@@ -21,7 +21,5 @@ public class FlightService {
                 .toUriString();
         return restTemplate.getForObject(url, String.class);
     }
-    public void hola(){
 
-    }
 }
