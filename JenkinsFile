@@ -1,0 +1,22 @@
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Clonar Repositorio') {
+            steps {
+                git 'https://github.com/alexander3d2/Ejercicio2.git'
+            }
+        }
+        stage('Compilar y Construir') {
+            steps {
+                bat 'mvnw.cmd clean package'  // Para un proyecto Maven
+            }
+        }
+        stage('Ejecutar Aplicación') {
+            steps {
+                sh 'java -jar target/Airlines-0.0.1-SNAPSHOT.jar'
+            }
+        }
+    }
+}
+```
